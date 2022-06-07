@@ -11,6 +11,12 @@
 th, td {
   padding: 0.5rem;
   white-space: nowrap;
+  background: #fff;
+}
+.table-scroller tr th:first-child,
+.table-scroller tr td:first-child {
+  position: sticky;
+  left: 0;
 }
 label {
   display: block;
