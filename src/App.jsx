@@ -15,13 +15,13 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {data.map((tr, idx) => (
-              <tr key={idx}>
-                {tr.map(td => {
+            {data.map((tr, trIdx) => (
+              <tr key={trIdx}>
+                {tr.map((td, tdIdx) => {
                   const id = td.replace(/[^a-z0-9]/gi, '').toLowerCase();
                   return (
                     <td key={id}>
-                      <Input label={td} id={id} />
+                      <Input label={td} id={id} isSelect={!(tdIdx % 2)} />
                     </td>
                   );
                 })}

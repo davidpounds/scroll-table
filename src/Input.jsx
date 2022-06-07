@@ -1,9 +1,10 @@
 const Input = (props) => {
-    const { id, label } = props;
+    const { id, label, isSelect = false } = props;
     return (
         <>
             <label for={id}>{label}</label>
-            <input type="text" id={id} />
+            {isSelect && <select id={id}><option>One</option><option>Two</option><option>Three</option></select>}
+            {!isSelect && <input type="text" id={id} />}
         </>
     );
 };

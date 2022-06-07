@@ -4,12 +4,7 @@ const tableRow = (rowIndex, baseArray) => baseArray.map(i => `Row ${rowIndex}, C
 
 const tableData = {
     header: baseArray.map(i => `Header ${i}`),
-    data: [
-        tableRow(0, baseArray),
-        tableRow(1, baseArray),
-        tableRow(2, baseArray),
-        tableRow(3, baseArray),
-    ],
+    data: baseArray.map(rowIndex => tableRow(rowIndex, baseArray)),
 };
 
 export default tableData;
